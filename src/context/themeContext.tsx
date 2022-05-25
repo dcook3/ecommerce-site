@@ -1,4 +1,9 @@
 import React from 'react';
+import Theme from '../components/types/Theme';
+
+interface Themes {
+  theme: Theme;
+}
 
 export const themes = {
     light: {
@@ -13,6 +18,6 @@ export const themes = {
     },
   };
   
-  export const ThemeContext = React.createContext({
+  export const ThemeContext = React.createContext<Themes>({
     theme: {},
   });

@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Products from './components/Products.js';
-import Home from './Home.js';
-import About from './About.js';
+import Products from './components/Products';
+import Home from './Home';
+import About from './About';
 import {BrowserRouter} from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 

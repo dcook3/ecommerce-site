@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import {Link, Outlet} from 'react-router-dom';
 import { ThemeContext } from '../context/themeContext';
-import themeIcon from '../assets/theme.svg'
 
-const Navbar = (props) => {
+interface Props {
+    toggleTheme: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+const Navbar = (props : Props) => {
     const {theme} = useContext(ThemeContext);
 
     return (
@@ -14,7 +17,9 @@ const Navbar = (props) => {
                     <Link className='nav-link' to="/Products">Products</Link>
                     <Link className='nav-link' to="/About">About</Link>
                 </div>
-                <button className="btn btn-primary" onClick={props.toggleTheme}><img src={themeIcon}></img></button>
+                <button className="btn btn-primary" onClick={props.toggleTheme}>
+                    Switch Theme
+                </button>
             </div>
         </nav>
     )

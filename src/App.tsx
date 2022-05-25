@@ -1,4 +1,3 @@
-import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import {Outlet} from 'react-router-dom';
 import Main from './components/Main';

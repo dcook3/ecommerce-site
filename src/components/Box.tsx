@@ -1,9 +1,14 @@
-import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/themeContext';
 
-const Box = ({size, children}) => 
+interface Props {
+    size: string;
+    children: JSX.Element | JSX.Element[];
+}
+
+const Box = (props: Props) => 
 {
+    const {size, children} = props
     const { theme } = useContext(ThemeContext);
     let style;
     switch (size){
@@ -29,16 +34,6 @@ const Box = ({size, children}) =>
             {children}
         </div>
     );
-}
-
-Box.propTypes = {
-    size: PropTypes.string,
-    color: PropTypes.string,
-    children: PropTypes.node
-}
-
-Box.defaultProps = {
-    color: "lightgrey"
 }
 
 export default Box;
