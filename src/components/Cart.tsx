@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector} from '../hooks/reduxHooks'
 import { CartItem } from '../redux/store';
-import { Product } from '../types/Product';
 import Box from './Box';
 import ProductHeader from './ProductHeader';
 
@@ -18,7 +17,7 @@ const Cart = () => {
     if(products.length > 0)
     {
         return (
-            <div style={{height: "100%"}}>
+            <div>
             {products.map((prod:CartItem) => {
                 return (
                     <Box key={prod.id} size='xl' children={

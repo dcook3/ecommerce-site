@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import useFetch from '../hooks/useFetch';
 import Loading from './Loading';
 import Box from './Box';
 import ProductHeader from './ProductHeader';
 import {Link, useNavigate} from 'react-router-dom';
-import { ThemeContext } from '../context/themeContext';
 import { useAppDispatch } from '../hooks/reduxHooks';
 import { Product } from '../types/Product';
 import { nanoid } from '@reduxjs/toolkit';
@@ -14,9 +13,7 @@ const Products = () => {
     const {data, loading, error} = useFetch();
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
-    const { theme } = useContext(ThemeContext);
     
-
     const buttonHandler = (e:React.MouseEvent, id:number) => {
         e.preventDefault();
         dispatch({type: 'add', payload: {id: nanoid(), product: data.find((prod:Product) => prod.id === id)}});
@@ -31,7 +28,7 @@ const Products = () => {
     }
 
     return (
-        <div style={{height: "100%"}}>
+        <div>
             {data.length && data.map((data) => {
                 return (
                     <Box key={data.id} size='xl' children={

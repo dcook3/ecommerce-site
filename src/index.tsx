@@ -11,21 +11,24 @@ import { Route, Routes } from 'react-router-dom';
 import { cartStore } from './redux/store';
 import { Provider } from 'react-redux';
 import ProductDetails from './components/ProductDetails';
+import ThemeProvider from './context/themeContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={cartStore}>
-      <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<App />}>
-              <Route index element={<Home />} />
-              <Route path="Products" element={<Products />} />
-              <Route path="Products/:productId" element={<ProductDetails />} />
-              <Route path="about" element={<About />} />
-              <Route path="cart" element={<Cart />}/>
-            </Route>
-        </Routes>
-      </BrowserRouter>
+      <ThemeProvider>
+        <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<App />}>
+                <Route index element={<Home />} />
+                <Route path="Products" element={<Products />} />
+                <Route path="Products/:productId" element={<ProductDetails />} />
+                <Route path="about" element={<About />} />
+                <Route path="cart" element={<Cart />}/>
+              </Route>
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
