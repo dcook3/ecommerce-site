@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/themeContext';
 
 const Box = ({size, children}) => 
 {
+    const { theme } = useContext(ThemeContext);
     let style;
     switch (size){
         case "sm":
@@ -17,11 +20,12 @@ const Box = ({size, children}) =>
             style = 'col-12';
             break;
         default:
-            style = {width: 200, height: 200};
+            style = 'col-6';
             break;
     }
+
     return( 
-        <div className={style + " p-2 border rounded"}>
+        <div className={style + " p-2 mb-2 border rounded"} style={{backgroundColor: theme.foreground, color: theme.textColor}}>
             {children}
         </div>
     );
