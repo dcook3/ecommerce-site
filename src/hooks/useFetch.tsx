@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Product } from '../components/types/Product';
+import { Product } from '../types/Product';
 
 const useFetch = () => {
     const [data, setData] = useState<Array<Product>>([]);

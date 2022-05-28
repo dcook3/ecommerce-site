@@ -1,5 +1,5 @@
 import React from 'react';
-import Theme from '../components/types/Theme';
+import Theme from '../types/Theme';
 
 interface Themes {
   theme: Theme;

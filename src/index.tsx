@@ -5,22 +5,28 @@ import App from './App';
 import Products from './components/Products';
 import Home from './Home';
 import About from './About';
+import Cart from './components/Cart';
 import {BrowserRouter} from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
+import { cartStore } from './redux/store';
+import { Provider } from 'react-redux';
+import ProductDetails from './components/ProductDetails';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<Home />} />
-            <Route path="/Products" element={<Products />}>
-              <Route path=":productId" element={<Products />} />
+    <Provider store={cartStore}>
+      <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<App />}>
+              <Route index element={<Home />} />
+              <Route path="Products" element={<Products />} />
+              <Route path="Products/:productId" element={<ProductDetails />} />
+              <Route path="about" element={<About />} />
+              <Route path="cart" element={<Cart />}/>
             </Route>
-            <Route path="about" element={<About />} />
-          </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
