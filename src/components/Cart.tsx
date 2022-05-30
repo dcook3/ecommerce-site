@@ -22,7 +22,7 @@ const Cart = () => {
                 return (
                     <Box key={prod.id} size='xl' children={
                         <div className='d-flex flex-row'>
-                            {<img src={prod.product.image} className="col-2"></img>}
+                            {<img src={prod.product.image} className="col-2" alt={prod.product.title}></img>}
                             <div className='d-flex flex-column'>
                                 <ProductHeader productName={prod.product.title} price={prod.product.price.toString()} />
                                 <p>{prod.product.description}</p>

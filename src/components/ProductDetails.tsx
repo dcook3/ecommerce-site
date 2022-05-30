@@ -13,7 +13,7 @@ const ProductDetails = () =>{
     const { theme } = useContext(ThemeContext);
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
-    const prod : Product | undefined = data.find((prod:Product) => prod.id == Number.parseInt(productId));
+    const prod : Product | undefined = data.find((prod:Product) => prod.id === Number.parseInt(productId));
 
     const buttonHandler = (e:React.MouseEvent) => {
         e.preventDefault();
@@ -34,7 +34,7 @@ const ProductDetails = () =>{
             return (
                 <div className='d-flex justify-content-center'>
                     <div className='d-flex flex-row p-5' style={{color: theme.textColor}}>
-                    {<img src={prod.image} className="col-3 me-2"></img>}
+                    {<img src={prod.image} className="col-3 me-2" alt={prod.title}></img>}
                         <div className='ms-2 d-flex flex-column'>
                             <h3>{prod.title}</h3>
                             <p>{prod.description}</p>

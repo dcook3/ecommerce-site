@@ -1,5 +1,5 @@
-import { configureStore, Reducer } from "@reduxjs/toolkit";
-import { PayloadAction, nanoid } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
+import { PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "../types/Product";
 
 export interface CartItem {

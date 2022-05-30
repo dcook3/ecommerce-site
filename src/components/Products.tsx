@@ -33,7 +33,7 @@ const Products = () => {
                 return (
                     <Box key={data.id} size='xl' children={
                         <div className='d-flex flex-row'>
-                            {<img src={data.image} className="col-2"></img>}
+                            {<img src={data.image} className="col-2" alt={data.title}></img>}
                             <div className='d-flex flex-column col-10'>
                                 <ProductHeader productName={data.title} price={data.price.toString()} />
                                 <p>{data.description}</p>
