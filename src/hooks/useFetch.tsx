@@ -1,10 +1,11 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Product } from '../types/Product';
 
 const useFetch = () => {
-    const [data, setData] = useState([]);
-    const [loading, setLoad] = useState(true);
-    const [error, setError] = useState('');
+    const [data, setData] = useState<Array<Product>>([]);
+    const [loading, setLoad] = useState<boolean>(true);
+    const [error, setError] = useState<string>('');
 
     useEffect(() => {
         
@@ -13,8 +14,8 @@ const useFetch = () => {
                 const response = await axios.get(`http://localhost:3000/products`);
                 setData(response.data);
             }
-            catch (error) {
-                setError(error);
+            catch (error: any) {
+                setError(error.message);
             } finally {
                 setLoad(false)
             }

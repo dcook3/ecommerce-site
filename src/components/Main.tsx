@@ -6,7 +6,7 @@ const Main = () => {
     const { theme } = useContext(ThemeContext);
     
     return (
-        <div style={{backgroundColor: theme.background, color: theme.textColor}}>
+        <div style={{backgroundColor: theme.background, color: theme.textColor}} className="d-flex flex-column">
             <main className='container'>
                 <Outlet />
             </main>

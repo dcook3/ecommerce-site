@@ -1,19 +1,19 @@
-import axios, { Axios } from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const usePost = () => {
-    const [response, setResponse] = useState(Axios.AxiosResponse);
-    const [error, setError] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
+    const [response, setResponse] = useState<AxiosResponse>();
+    const [error, setError] = useState<string>('');
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
-    const postData = async (data) => {
+    const postData = async (data:any) => {
         await axios.post(`http://localhost:3000/posts`, data)
         .then((res) => {
             setIsLoading(true);
             setResponse(res);
         })
-        .catch((error) => {
-            setError(error)
+        .catch((error:any) => {
+            setError(error.response.message)
         })
         .finally(() => {
             setIsLoading(false);
