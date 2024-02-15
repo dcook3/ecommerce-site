@@ -11,7 +11,7 @@ const useFetch = () => {
         
         const getData = async () => {
             try{
-                const response = await axios.get(`http://localhost:3000/products`);
+                const response = await axios.get(`http://3.87.112.70:3000/products`);
                 setData(response.data);
             }
             catch (error: any) {
