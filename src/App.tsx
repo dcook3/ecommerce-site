@@ -1,4 +1,3 @@
-import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import Main from './components/Main';
 import Navbar from './components/Navbar'
