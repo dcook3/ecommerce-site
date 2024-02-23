@@ -30,6 +30,7 @@ const ThemeProvider = (props) => {
     prevValue === themes.dark ? themes.light : themes.dark
     );
   };
+  document.body.style.background = theme.background;
   return (
   <ThemeContext.Provider value={{ theme: theme, toggleTheme: toggleTheme }}>
     {props.children}
