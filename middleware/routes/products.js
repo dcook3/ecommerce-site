@@ -10,7 +10,7 @@ const ObjectId = require("mongodb").ObjectId;
  
 // This section will help you get a list of all the productss.
 productsRoutes.route("/products").get(function (req, res) {
- let db_connect = dbo.getDb("employees");
+ let db_connect = dbo.getDb("products");
  db_connect
     .collection("products")
     .find({})
