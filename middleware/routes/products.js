@@ -10,9 +10,16 @@ const ObjectId = require("mongodb").ObjectId;
  
 // This route gets a list of all the products.
 productsRoutes.route("/products").get(async (req, res) => {
-    let db_connect = dbo.getDb();
-    let data = await db_connect.collection("products").find({}).toArray();
-    res.json(data)
+    try{
+        let db_connect = dbo.getDb();
+        let data = await db_connect.collection("products").find({}).toArray();
+        console.log("It worked")
+        res.json(data)
+    }
+    catch (e){
+        res.status(500)
+        throw new Error(e)
+    }
 });
 
 module.exports = productsRoutes;
