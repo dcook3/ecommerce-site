@@ -7,7 +7,6 @@ const dbo = require("../conn");
 // This help convert the id from string to ObjectId for the _id.
 const ObjectId = require("mongodb").ObjectId;
 
- 
 // This route gets a list of all the products.
 productsRoutes.route("/products").get(async (req, res) => {
     try{
