@@ -24,3 +24,4 @@ yarn-error.log*
 
 /.vscode
 *.env
+middleware/aws_userdata.txt

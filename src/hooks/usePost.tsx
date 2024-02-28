@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const usePost = () => {
     const [response, setResponse] = useState<AxiosResponse>();

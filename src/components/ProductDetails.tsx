@@ -7,13 +7,15 @@ import {Link, useNavigate, useParams} from 'react-router-dom';
 import { nanoid } from '@reduxjs/toolkit';
 import { useAppDispatch } from '../hooks/reduxHooks';
 
-const ProductDetails = () =>{
+const ProductDetails = () => {
     const {data, loading, error} = useFetch();
     const {productId} = useParams();
     const { theme } = useContext(ThemeContext);
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
-    const prod : Product | undefined = data.find((prod:Product) => prod.id === Number.parseInt(productId));
+
+    const productIdStr : string = productId!;
+    const prod : Product | undefined = data.find((prod:Product) => prod.id === Number.parseInt(productIdStr));
 
     const buttonHandler = (e:React.MouseEvent) => {
         e.preventDefault();

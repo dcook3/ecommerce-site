@@ -3,12 +3,13 @@ import { useAppDispatch, useAppSelector} from '../hooks/reduxHooks'
 import { CartItem } from '../redux/store';
 import Box from './Box';
 import ProductHeader from './ProductHeader';
+import React from 'react';
 
 const Cart = () => {
     const products = useAppSelector((state) => state.items); 
     const dispatch = useAppDispatch();
     
-    const handleDelete = (e:React.MouseEvent, id:string) =>{
+    const handleDelete = (e:React.MouseEvent, id:string) => {
         e.preventDefault();
         dispatch({type:'remove', payload: products.find((prod:CartItem) => prod.id === id)})
         

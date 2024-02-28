@@ -31,7 +31,7 @@ const Products = () => {
         <div>
             {data.length && data.map((data) => {
                 return (
-                    <Box key={data.id} size='xl' children={
+                    <Box key={data.id} size='xl' children = {
                         <div className='d-flex flex-row'>
                             {<img src={data.image} className="col-2" alt={data.title}></img>}
                             <div className='d-flex flex-column col-10'>
