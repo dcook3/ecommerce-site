@@ -1,10 +1,11 @@
+import React from "react";
+
 interface Props {
     label: string;
     onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button = (props : Props) => 
-{
+const Button = (props : Props) => {
     const { label, onClick} = props;
     return(
         <>

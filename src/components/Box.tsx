@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../context/themeContext';
+import React from 'react';
 
 interface Props {
     size: string;
     children: JSX.Element | JSX.Element[];
 }
 
-const Box = (props: Props) => 
-{
+const Box = (props: Props) => {
     const {size, children} = props
     const { theme } = useContext(ThemeContext);
     let style;

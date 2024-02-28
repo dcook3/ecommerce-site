@@ -1,3 +1,5 @@
+import React from "react";
+
 interface Props {
     productName: string;
     price: string;
