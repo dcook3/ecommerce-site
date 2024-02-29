@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+React E-Commerce App Documentation: Sample E-Commerce Site
+===================================================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Code made by: Dylan Cook ([@dcook3](https://github.com/dcook3))
 
-## Available Scripts
+### Project Description
+This site is a basic E-Commerce site meant to exhibit my skills in React.JS and MERN technologies. I plan to add more features on it as I go along. The site features a full MERN stack (Mongo, Express, React, Node) and pulls product data from a MongoDB database through an express API middleware app, located at [this repository](https://github.com/dcook3/rProj-api). The site displays that data back to the user in a modern, mobile-friendly and responsive view.
 
-In the project directory, you can run:
+### Site Link
+[Deployment Link](https://earnest-trifle-07d235.netlify.app) - WIP, will be more functional with the addition of a better CI/CD
 
-### `npm start`
+### Features
+- Full MERN stack implementing a single-page React.JS frontend, an Express JS node server middleware, and MongoDB backend
+- Fully managed MongoDB database hold product records for display
+- Database-held image support for product records
+- Responsive and mobile-friendly frontend using Bootstrap breakpoints
+- And more!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Planned Features
+Currently planned features for this app include enhanced API and frontend security, admin access for the addition of new products, deletion of old products, and the ability to edit existing products. 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+TL:DR - Full CRUD functionality is the goal here, as well as enhanced security on the website and API projects. I also plan on adding CI/CD for both the site and API projects.
