@@ -18,6 +18,12 @@ This site is a basic E-Commerce site meant to exhibit my skills in React.JS and 
 
 
 ### Planned Features
-Currently planned features for this app include enhanced API and frontend security, admin access for the addition of new products, deletion of old products, and the ability to edit existing products. 
+Currently planned features for this app include enhanced API and frontend security, user accounts and admin access for the addition of new products, deletion of old products, and the ability to edit existing products. I also plan on updating some of the user interface components to look better. This will include a new products preview, and potentially a basic CMS (Content management system) for admins to customize their landing page. This potential feature however is a bit of a stretch for me, and may end up not being added.
 
-TL:DR - Full CRUD functionality is the goal here, as well as enhanced security on the website and API projects. I also plan on adding CI/CD for both the site and API projects.
+#### Product Backlog/Planned Features TL:DR
+- [] Full CRUD functionality is the first goal 
+- [] Enhanced security on website and API projects
+- [] User accounts and admin accounts with admin-specific functions 
+Stretch tasks:
+- [] A complete CI/CD for both projects
+- [] CMS for admins to customize landing page.
