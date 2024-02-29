@@ -1,7 +1,7 @@
 React E-Commerce App Documentation: Sample E-Commerce Site
 ===================================================
 
-#### Code made by: Dylan Cook ([@dcook3](https://github.com/dcook3))
+#### Project by: Dylan Cook ([@dcook3](https://github.com/dcook3))
 
 ### Project Description
 This site is a basic E-Commerce site meant to exhibit my skills in React.JS and MERN technologies. I plan to add more features on it as I go along. The site features a full MERN stack (Mongo, Express, React, Node) and pulls product data from a MongoDB database through an express API middleware app, located at [this repository](https://github.com/dcook3/rProj-api). The site displays that data back to the user in a modern, mobile-friendly and responsive view.
@@ -27,3 +27,5 @@ Currently planned features for this app include enhanced API and frontend securi
 Stretch tasks:
 - [] A complete CI/CD for both projects
 - [] CMS for admins to customize landing page.
+
+[Trello Link]() - coming soon!
