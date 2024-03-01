@@ -12,7 +12,7 @@ import { cartStore } from './redux/store';
 import { Provider } from 'react-redux';
 import ProductDetails from './components/ProductDetails';
 import ThemeProvider from './context/themeContext';
-
+//test
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={cartStore}>
